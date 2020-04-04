@@ -2,19 +2,24 @@
     <button mat-button fxHide fxHide.xs="false" class="sidenav-toggle" (click)="toggleSidenav.emit()">
         <mat-icon>menu</mat-icon>
     </button>
-   <!--<button mat-button fxHide.xs="true" class="sidenav-toggle" (click)="toggle()">
-        <mat-icon>menu</mat-icon>
-    </button>-->
     <button mat-raised-button="" class=" sidenav-toggle btn btn-just-icon btn-white btn-fab btn-round" (click)="toggle()">
-        <i class="material-icons text_align-center visible-on-sidebar-regular" *ngIf="!menuIcon">more_vert</i>
-        <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini" *ngIf = "menuIcon">view_list</i>
+        <i class="material-icons text_align-center" *ngIf="!menuIcon">more_vert</i>
+        <i class="material-icons design_bullet-list-67 " *ngIf = "menuIcon">view_list</i>
     </button>
     <span>داشبورد</span>
 
-    <div class="navbar-icon">
-        <ul class="navbar-nav">
-            <li><a href="#pablo"><i class="material-icons">dashboard</i></a></li>
-
-           </ul>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          
+            <li>
+                <a routerLink="/account">پروفایل</a>
+            </li>
+        <!--     <li>
+                <a routerLink="/account">خوش آمدید </a>
+            </li> -->
+            <li>
+                <a routerLink="/owner">خروج</a>
+            </li>
+        </ul>
     </div>
 </mat-toolbar>
