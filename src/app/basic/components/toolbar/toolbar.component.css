@@ -1,0 +1,40 @@
+.sidenav-toggle {
+    padding: 0;
+    margin: 8px;
+    min-width:56px;
+  }
+
+.btn.btn-just-icon{
+  font-size: 24px;
+  height: 41px;
+  min-width: 41px;
+  width: 41px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  line-height: 41px;
+}
+
+.btn-round{
+  border-radius: 50px;
+}
+
+.btn.btn-white{
+  background-color: #ffffff;
+  color: #999;
+}
+
+[type=button]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn{
+  box-shadow: 0 2px 2px 0 hsla(0,0%,60%,.14),
+   0 3px 1px -2px hsla(0,0%,60%,.2),
+    0 1px 5px 0 hsla(0,0%,60%,.12);
+}
+
+.navbar-icon{
+  display: inline-block;
+}
+
