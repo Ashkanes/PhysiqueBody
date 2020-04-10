@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { MediaObserver, MediaChange } from '@angular/flex-layout';
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent implements OnInit, OnDestroy{
 
   isScreenSmall = false;
   watcher: Subscription;
@@ -16,8 +16,15 @@ export class SidenavComponent implements OnInit {
       this.isScreenSmall = change.mqAlias === "xs";
     });
    }
-
   ngOnInit() {
+    
   }
+
+
+  ngOnDestroy(): void {
+    this.watcher.unsubscribe();
+  }
+
+ 
 
 }

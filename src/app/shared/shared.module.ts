@@ -11,7 +11,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+   
     
   ],
   exports: [
@@ -20,7 +21,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    
     
   ]
 })

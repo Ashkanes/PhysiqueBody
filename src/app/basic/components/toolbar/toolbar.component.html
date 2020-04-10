@@ -1,25 +1,21 @@
-<mat-toolbar color="primary">
-    <button mat-button fxHide fxHide.xs="false" class="sidenav-toggle" (click)="toggleSidenav.emit()">
-        <mat-icon>menu</mat-icon>
+<header>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggle()">
+      <mat-icon>menu</mat-icon>
     </button>
-    <button mat-raised-button="" class=" sidenav-toggle btn btn-just-icon btn-white btn-fab btn-round" (click)="toggle()">
-        <i class="material-icons text_align-center" *ngIf="!menuIcon">more_vert</i>
-        <i class="material-icons design_bullet-list-67 " *ngIf = "menuIcon">view_list</i>
-    </button>
-    <span>داشبورد</span>
+    <span>منوی اصلی</span>
+<div>
+  <button mat-icon-button [mat-menu-trigger-for]="menu">
+    <mat-icon>person</mat-icon>
+  </button>
+</div>
+  </mat-toolbar>
 
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          
-            <li>
-                <a routerLink="/account">پروفایل</a>
-            </li>
-        <!--     <li>
-                <a routerLink="/account">خوش آمدید </a>
-            </li> -->
-            <li>
-                <a routerLink="/owner">خروج</a>
-            </li>
-        </ul>
-    </div>
-</mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>تنظیمات</button>
+    <button [routerLink]="['register']" mat-menu-item>ثبت نام</button>
+    <button [routerLink]="['login']" mat-menu-item>ورود</button>
+    <button mat-menu-item>خروج</button>
+  </mat-menu>
+
+</header>
