@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { BasicModule } from './basic/basic.module';
 import { AuthService } from './_services/auth.service';
+import { ErrorInterceptorProvide } from './core/error.interceptor';
 
 
 
@@ -28,7 +29,7 @@ import { AuthService } from './_services/auth.service';
    
     
   ],
-  providers: [AuthService],
+  providers: [AuthService,ErrorInterceptorProvide],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
