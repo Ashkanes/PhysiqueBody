@@ -4,6 +4,7 @@ import { MainAppComponent } from './main-app/main-app.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from '../core/_guards/auth.guard';
 
 
 const routes: Routes = [
@@ -12,6 +13,9 @@ const routes: Routes = [
   {path:"", component:MainContentComponent,children:[
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
+    /* {path:"home", component:RegisterComponent , canActivate:[AuthGuard]}, */
+    {path:'',
+  runGuardsAndResolvers: 'alweys'}
   ]}
 ]},
 {path:"**", redirectTo:""}

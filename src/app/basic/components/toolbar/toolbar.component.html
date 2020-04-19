@@ -1,23 +1,26 @@
 <header>
-  <mat-toolbar color="primary">
+  <mat-toolbar  color="primary">
+
     <button mat-icon-button (click)="toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>منوی اصلی</span>
-<div>
-  <button mat-icon-button [mat-menu-trigger-for]="menu">
+
+    <span class="example-fill-remaining-space"></span>
+    
+  <button  mat-icon-button [mat-menu-trigger-for]="menu">
     <mat-icon>person</mat-icon>
   </button>
-</div>
+
 <div *ngIf="loggedIn()">
-  خوش آمدید{{authService.decodeToken?.unique_name}}
+  خوش آمدید {{authService.decodeToken?.unique_name}}
 </div>
   </mat-toolbar>
 
   <mat-menu x-position="before" #menu="matMenu">
     <button mat-menu-item>تنظیمات</button>
-    <button [routerLink]="['register']" mat-menu-item>ثبت نام</button>
-    <button [routerLink]="['login']" mat-menu-item>ورود</button>
+    <button *ngIf="!loggedIn()"  [routerLink]="['register']" mat-menu-item>ثبت نام</button>
+    <button *ngIf="!loggedIn()"  [routerLink]="['login']" mat-menu-item>ورود</button>
     <button mat-menu-item>خروج</button>
   </mat-menu>
 

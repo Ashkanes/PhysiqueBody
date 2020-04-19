@@ -10,6 +10,7 @@ import { BasicModule } from './basic/basic.module';
 import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvide } from './core/error.interceptor';
 import { AlertifyService } from './core/alertify.service';
+import { AuthGuard } from './core/_guards/auth.guard';
 
 
 
@@ -30,7 +31,10 @@ import { AlertifyService } from './core/alertify.service';
    
     
   ],
-  providers: [AuthService,ErrorInterceptorProvide,AlertifyService],
+  providers: [AuthService,
+    ErrorInterceptorProvide,
+    AlertifyService,
+  AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
