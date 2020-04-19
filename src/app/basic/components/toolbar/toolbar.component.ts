@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,7 +10,7 @@ export class ToolbarComponent implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
 
   menuIcon:boolean=false;
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,10 @@ export class ToolbarComponent implements OnInit {
   toggle(){
     this.toggleSidenav.emit();
     this.menuIcon = !this.menuIcon;
+  }
+
+  loggedIn(){
+    return this.authService.LoggedIn();
   }
 
 }

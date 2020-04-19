@@ -9,6 +9,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { BasicModule } from './basic/basic.module';
 import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvide } from './core/error.interceptor';
+import { AlertifyService } from './core/alertify.service';
 
 
 
@@ -29,7 +30,7 @@ import { ErrorInterceptorProvide } from './core/error.interceptor';
    
     
   ],
-  providers: [AuthService,ErrorInterceptorProvide],
+  providers: [AuthService,ErrorInterceptorProvide,AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

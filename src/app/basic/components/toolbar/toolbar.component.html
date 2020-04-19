@@ -9,6 +9,9 @@
     <mat-icon>person</mat-icon>
   </button>
 </div>
+<div *ngIf="loggedIn()">
+  خوش آمدید{{authService.decodeToken?.unique_name}}
+</div>
   </mat-toolbar>
 
   <mat-menu x-position="before" #menu="matMenu">
