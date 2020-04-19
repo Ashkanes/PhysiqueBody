@@ -14,8 +14,11 @@ const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
     /* {path:"home", component:RegisterComponent , canActivate:[AuthGuard]}, */
-    {path:'',
-  runGuardsAndResolvers: 'alweys'}
+    /* {path:'',
+  runGuardsAndResolvers: 'always',
+canActivate: [AuthGuard],
+children:[]}, */
+
   ]}
 ]},
 {path:"**", redirectTo:""}
