@@ -11,6 +11,8 @@ import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvide } from './core/error.interceptor';
 import { AlertifyService } from './core/alertify.service';
 import { AuthGuard } from './core/_guards/auth.guard';
+import { ListCoachesComponent } from './src/basic/components/list-coaches/list-coaches.component';
+import { CoachService } from './basic/components/_services/coach.service';
 
 
 
@@ -18,6 +20,7 @@ import { AuthGuard } from './core/_guards/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
+    ListCoachesComponent,
    
     
   ],
@@ -34,7 +37,8 @@ import { AuthGuard } from './core/_guards/auth.guard';
   providers: [AuthService,
     ErrorInterceptorProvide,
     AlertifyService,
-  AuthGuard],
+    AuthGuard,
+    CoachService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

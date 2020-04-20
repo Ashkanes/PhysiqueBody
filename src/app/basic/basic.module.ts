@@ -9,10 +9,12 @@ import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainAppComponent } from './main-app/main-app.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ListCoachesComponent } from './components/list-coaches/list-coaches.component';
+import { CoachComponent } from './components/_services/coach/coach.component';
 
 
 @NgModule({
-  declarations: [ToolbarComponent, MainContentComponent, SidenavComponent,LoginComponent, MainAppComponent, RegisterComponent],
+  declarations: [ToolbarComponent, MainContentComponent, SidenavComponent,LoginComponent, MainAppComponent, RegisterComponent, ListCoachesComponent, CoachComponent],
   imports: [
     CommonModule,
     BasicRoutingModule,
