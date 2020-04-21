@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { JwtModule } from '@auth0/angular-jwt';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +13,11 @@ import { AlertifyService } from './core/alertify.service';
 import { AuthGuard } from './core/_guards/auth.guard';
 import { CoachService } from './basic/components/_services/coach.service';
 
+
+
+export function tokenGetter(){
+  return localStorage.getItem('token');
+}
 
 
 
@@ -30,7 +35,13 @@ import { CoachService } from './basic/components/_services/coach.service';
     AppRoutingModule,
     DashboardModule,
     BrowserAnimationsModule,
-   
+    JwtModule.forRoot({
+      config:{
+        tokenGetter: tokenGetter,
+        whitelistedDomains:['localhost:5000/'],
+        blacklistedRoutes:['localhost:5000/api/auth']
+      }
+    })
     
   ],
   providers: [AuthService,
