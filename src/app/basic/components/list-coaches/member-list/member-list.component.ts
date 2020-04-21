@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Coach } from '../../_models/coach';
 
 @Component({
   selector: 'app-member-list',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
 
+  @Input() coach: Coach;
   constructor() { }
 
   ngOnInit() {

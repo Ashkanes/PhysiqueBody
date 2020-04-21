@@ -15,11 +15,7 @@ const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
     {path:"coaches", component:ListCoachesComponent},
-    /* {path:"home", component:RegisterComponent , canActivate:[AuthGuard]}, */
-    /* {path:'',
-  runGuardsAndResolvers: 'always',
-canActivate: [AuthGuard],
-children:[]}, */
+
 
   ]}
 ]},
@@ -31,3 +27,10 @@ children:[]}, */
   exports: [RouterModule]
 })
 export class BasicRoutingModule { }
+
+
+    /* {path:"home", component:RegisterComponent , canActivate:[AuthGuard]}, */
+    /* {path:'',
+  runGuardsAndResolvers: 'always',
+canActivate: [AuthGuard],
+children:[]}, */
