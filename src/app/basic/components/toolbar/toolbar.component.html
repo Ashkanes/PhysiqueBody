@@ -1,26 +1,37 @@
 <header>
-  <mat-toolbar  color="primary">
+  <mat-toolbar color="primary">
 
-    <button mat-icon-button (click)="toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <span><a mat-button mat-icon-button (click)="toggle()"> <mat-icon>menu</mat-icon></a></span>
+     
     <span>منوی اصلی</span>
 
-    <span class="example-fill-remaining-space"></span>
-    
-  <button  mat-icon-button [mat-menu-trigger-for]="menu">
-    <mat-icon>person</mat-icon>
-  </button>
+    <div fxShow="true" fxHide.lt-md="true">
 
-<div *ngIf="loggedIn()">
-  خوش آمدید {{authService.decodeToken?.unique_name}}
-</div>
+      <a [routerLink]="['coaches']" mat-button>لیست مربیان</a>
+
+      <a [routerLink]="['coaches']" mat-button>لیست باشگاهها</a>
+
+      <a [routerLink]="['coaches']" mat-button>عضویت</a>
+
+    </div>
+
+
+
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+
+    <div *ngIf="loggedIn()">
+      خوش آمدید {{authService.decodeToken?.unique_name}}
+    </div>
   </mat-toolbar>
 
   <mat-menu x-position="before" #menu="matMenu">
     <button mat-menu-item>تنظیمات</button>
-    <button *ngIf="!loggedIn()"  [routerLink]="['register']" mat-menu-item>ثبت نام</button>
-    <button *ngIf="!loggedIn()"  [routerLink]="['login']" mat-menu-item>ورود</button>
+    <button *ngIf="!loggedIn()" [routerLink]="['register']" mat-menu-item>ثبت نام</button>
+    <button *ngIf="!loggedIn()" [routerLink]="['login']" mat-menu-item>ورود</button>
     <button mat-menu-item>خروج</button>
   </mat-menu>
 

@@ -45,6 +45,8 @@
 a {
   text-decoration: none;
   color: white;
+  font-size: 19px;
+  margin-right: 28px;
 }
 li{
   margin-right: 10px;
