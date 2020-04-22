@@ -11,15 +11,15 @@
 
     <mat-nav-list>
       
-        <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+        <a mat-list-item [routerLink]="['/home']" (click)="onSidenavClose()">
           <mat-icon aria-label="home">home</mat-icon> <span class="nav-caption">خانه</span>
       </a>
     
-        <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+        <a mat-list-item [routerLink]="['/home']" (click)="onSidenavClose()">
           <mat-icon role="img" aria-label="forms">content_paste</mat-icon> <span class="nav-caption">فرم</span>
       </a>
  
-        <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+        <a mat-list-item [routerLink]="['/home']" (click)="onSidenavClose()">
           <mat-icon role="img" aria-label="charts">show_chart</mat-icon> <span class="nav-caption">نمودارها</span>
       </a>
       

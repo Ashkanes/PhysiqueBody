@@ -7,11 +7,11 @@
 
     <div fxShow="true" fxHide.lt-md="true">
 
-      <a [routerLink]="['coaches']" mat-button>لیست مربیان</a>
+      <a [routerLink]="['/coaches']" mat-button>لیست مربیان</a>
 
-      <a [routerLink]="['coaches']" mat-button>لیست باشگاهها</a>
+      <a [routerLink]="['/coaches']" mat-button>لیست باشگاهها</a>
 
-      <a [routerLink]="['coaches']" mat-button>عضویت</a>
+      <a [routerLink]="['/coaches']" mat-button>عضویت</a>
 
     </div>
 
@@ -30,8 +30,8 @@
 
   <mat-menu x-position="before" #menu="matMenu">
     <button mat-menu-item>تنظیمات</button>
-    <button *ngIf="!loggedIn()" [routerLink]="['register']" mat-menu-item>ثبت نام</button>
-    <button *ngIf="!loggedIn()" [routerLink]="['login']" mat-menu-item>ورود</button>
+    <button *ngIf="!loggedIn()" [routerLink]="['/register']" mat-menu-item>ثبت نام</button>
+    <button *ngIf="!loggedIn()" [routerLink]="['/login']" mat-menu-item>ورود</button>
     <button mat-menu-item>خروج</button>
   </mat-menu>
 
