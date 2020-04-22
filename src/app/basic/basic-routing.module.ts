@@ -12,16 +12,16 @@ import { CoachDetailComponent } from './components/list-coaches/coach-detail/coa
 const routes: Routes = [
   
   {path:"", component:MainAppComponent,children:[
+  {path:"", component:MainContentComponent,children:[
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
     {path:"coaches", component:ListCoachesComponent},
-    {path:"coaches/{id}", component:CoachDetailComponent},
+    {path:"coaches/detail", component:CoachDetailComponent},
 
 
-  ]},
-
+  ]}
+]},
 {path:"**", redirectTo:""}
-
 ];
 
 @NgModule({
