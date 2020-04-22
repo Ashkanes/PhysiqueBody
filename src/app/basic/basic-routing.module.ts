@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from '../core/_guards/auth.guard';
 import { ListCoachesComponent } from './components/list-coaches/list-coaches.component';
+import { CoachDetailComponent } from './components/list-coaches/coach-detail/coach-detail.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
     {path:"coaches", component:ListCoachesComponent},
+    {path:"coaches/{id}", component:CoachDetailComponent},
 
 
   ]}

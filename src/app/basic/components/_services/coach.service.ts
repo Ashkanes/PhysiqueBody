@@ -23,7 +23,7 @@ baseUrl = environment.apiUrl;
     return this.http.get<Coach[]>(this.baseUrl + "coach");
   }
 
-  getUser(id):Observable<Coach>{
+  getCoach(id):Observable<Coach>{
     return this.http.get<Coach>(this.baseUrl + "coach/" + id);
   }
 }

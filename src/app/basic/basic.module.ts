@@ -11,6 +11,7 @@ import { MainAppComponent } from './main-app/main-app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ListCoachesComponent } from './components/list-coaches/list-coaches.component';
 import { MemberListComponent } from './components/list-coaches/member-list/member-list.component';
+import { CoachDetailComponent } from './components/list-coaches/coach-detail/coach-detail.component';
 
 
 
@@ -22,7 +23,8 @@ import { MemberListComponent } from './components/list-coaches/member-list/membe
        MainAppComponent, 
        RegisterComponent,
         ListCoachesComponent,
-        MemberListComponent],
+        MemberListComponent,
+        CoachDetailComponent],
   imports: [
     CommonModule,
     BasicRoutingModule,
