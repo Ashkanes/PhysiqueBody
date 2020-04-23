@@ -26,8 +26,10 @@
     "@laylazi/bootstrap-rtl": "^4.4.101",
     "@material/top-app-bar": "^5.1.0",
     "alertifyjs": "^1.13.1",
+    "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
+    "ngx-gallery": "^5.10.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

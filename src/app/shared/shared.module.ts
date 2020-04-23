@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { MaterialModule } from "./material/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     FormsModule,
     HttpClientModule,
     MaterialModule,
+    NgxGalleryModule
    
     
   ],
@@ -22,6 +24,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     FormsModule,
     HttpClientModule,
     MaterialModule,
+    NgxGalleryModule
     
     
   ]

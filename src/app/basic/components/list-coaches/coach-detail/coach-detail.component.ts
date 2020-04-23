@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Coach } from '../../_models/coach';
 import { AlertifyService } from 'src/app/core/alertify.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
 @Component({
   selector: 'app-coach-detail',
@@ -13,9 +13,53 @@ import { ActivatedRoute } from '@angular/router';
 export class CoachDetailComponent implements OnInit {
 
   coach:Coach;
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
+
   constructor(private coachService: CoachService, private alertify: AlertifyService) { }
 
   ngOnInit() {
+        this.galleryOptions = [
+            {
+                width: '600px',
+                height: '400px',
+                thumbnailsColumns: 4,
+                imageAnimation: NgxGalleryAnimation.Slide
+            },
+            // max-width 800
+            {
+                breakpoint: 800,
+                width: '100%',
+                height: '600px',
+                imagePercent: 80,
+                thumbnailsPercent: 20,
+                thumbnailsMargin: 20,
+                thumbnailMargin: 20
+            },
+            // max-width 400
+            {
+                breakpoint: 400,
+                preview: false
+            }
+        ];
+ 
+        this.galleryImages = [
+            {
+                small: 'assets/marc.jpg',
+                medium: 'assets/marc.jpg',
+                big: 'assets/marc.jpg'
+            },
+            {
+              small: 'assets/marc.jpg',
+              medium: 'assets/marc.jpg',
+              big: 'assets/marc.jpg'
+          },
+          {
+            small: 'assets/marc.jpg',
+            medium: 'assets/marc.jpg',
+            big: 'assets/marc.jpg'
+        }
+        ];
 
   }
 
