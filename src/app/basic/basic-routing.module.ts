@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from '../core/_guards/auth.guard';
 import { ListCoachesComponent } from './components/list-coaches/list-coaches.component';
 import { CoachDetailComponent } from './components/list-coaches/coach-detail/coach-detail.component';
+import { MemberEditComponent } from './components/list-coaches/member-edit/member-edit.component';
 
 
 const routes: Routes = [
@@ -17,8 +18,7 @@ const routes: Routes = [
     {path:"register", component:RegisterComponent},
     {path:"coaches", component:ListCoachesComponent},
     {path:"coaches/detail", component:CoachDetailComponent},
-
-
+    {path:"coaches/detail/edit", component:MemberEditComponent},
   ]}
 ]},
 {path:"**", redirectTo:""}

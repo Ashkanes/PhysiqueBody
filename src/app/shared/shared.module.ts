@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { MaterialModule } from "./material/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { NgxGalleryModule } from 'ngx-gallery';
+import { TabsModule } from "ngx-bootstrap/tabs";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { NgxGalleryModule } from 'ngx-gallery';
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    TabsModule.forRoot(),
    
     
   ],
@@ -24,7 +26,8 @@ import { NgxGalleryModule } from 'ngx-gallery';
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    TabsModule
     
     
   ]

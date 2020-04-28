@@ -63,5 +63,17 @@ export class CoachDetailComponent implements OnInit {
 
   }
 
+  getImages(){
+      const imgUrls = [];
+      for(let i=0; i < this.coach.photo.length; i++){
+        imgUrls.push({
+            small: this.coach.photo[i].url,
+            medium: this.coach.photo[i].url,
+            big: this.coach.photo[i].url,
+            description:this.coach.photo[i].description
+        });
+      }
+      return imgUrls;
+  }
 
 }

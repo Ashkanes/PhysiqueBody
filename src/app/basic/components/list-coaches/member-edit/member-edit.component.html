@@ -1,0 +1,95 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-sm-4">
+          <h1>Your Profile</h1>
+      </div>
+      <div class="col-sm-8">
+        <div *ngIf="editForm.dirty" class="alert alert-info">
+          <strong>Information:</strong> You have made changes.  Any unsaved changes will be lost!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top img-thumbnail" src="assets/marc.jpg" alt="">
+          <div class="card-body">
+            <div>
+              <strong>Location:</strong>
+              <p>city, countery</p>
+            </div>
+            <div>
+              <strong>Age:</strong>
+              <p>32</p>
+            </div>
+            <div>
+              <strong>Last Active:</strong>
+              <p>time</p>
+            </div>
+            <div>
+              <strong>Member Since:</strong>
+              <p>created</p>
+            </div>
+          </div>
+          <div class="card-footer">
+              <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="tab-panel ">
+          <tabset class="member-tabset">
+            <tab heading="Edit Profile">
+                <form #editForm="ngForm" class="p-20">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4 " class="col-form-label-sm" >ایمیل</label>
+                        <input type="email" class="form-control form-control-sm" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4 " class="col-form-label-sm">گذر واژه</label>
+                        <input type="password" class="form-control form-control-sm" id="inputPassword4" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress" class="col-form-label-sm">آدرس</label>
+                      <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                 
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity" class="col-form-label-sm">شهر</label>
+                        <input type="text" class="form-control form-control-sm" id="inputCity">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputState" class="col-form-label-sm">استان</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip" class="col-form-label-sm">Zip</label>
+                        <input type="text" class="form-control form-control-sm" id="inputZip">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input form-control-sm" type="checkbox" id="gridCheck">
+                        <label class="form-check-label ccol-form-label-sm" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+
+            </tab>
+            <tab heading="Edit Photos">
+              <p>Photo edit will go here</p>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+    </div>
+  </div>
