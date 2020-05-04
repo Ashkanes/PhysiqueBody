@@ -8,6 +8,7 @@ import { AuthGuard } from '../core/_guards/auth.guard';
 import { ListCoachesComponent } from './components/list-coaches/list-coaches.component';
 import { CoachDetailComponent } from './components/list-coaches/coach-detail/coach-detail.component';
 import { MemberEditComponent } from './components/list-coaches/member-edit/member-edit.component';
+import { RegisterClubComponent } from './components/register-club/register-club.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"", component:MainContentComponent,children:[
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
+    {path:"registerClub", component:RegisterClubComponent},
     {path:"coaches", component:ListCoachesComponent},
     {path:"coaches/detail", component:CoachDetailComponent},
     {path:"coaches/detail/edit", component:MemberEditComponent},

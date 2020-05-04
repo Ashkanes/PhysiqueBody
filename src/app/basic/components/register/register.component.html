@@ -6,40 +6,50 @@
     <div class="row form-signin">
    
       <div>
-        <form novalidate="">
+        <form #registerForm="ngForm" (ngSubmit)="register()">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="firstName">نام</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" name="firstName" [(ngModel)]="model.firstName"> 
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName">نام خانوادگی</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="lastName"  [(ngModel)]="model.lastName">
             </div>
           </div>
   
           <div class="mb-3">
             <label for="username">نام کاربری</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              <input type="text" class="form-control" id="username" placeholder="Username" required="" name="username"  [(ngModel)]="model.username">
             </div>
           </div>
 
           <div class="mb-3">
             <label for="username">رمز عبور</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              <input type="text" class="form-control" id="password" placeholder="password" required="" name="password"  [(ngModel)]="model.password">
             </div>
           </div>
   
           <div class="mb-3">
             <label for="email">ایمیل <span class="text-muted">(Optional)</span></label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email" [(ngModel)]="model.email">
           </div>
+
+          
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input " id="man" name="gender" value="2" [(ngModel)]="model.gender" checked>
+            <label class="custom-control-label " for="man">مرد</label>
+          </div>
+         <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="woman" name="gender" value="4" [(ngModel)]="model.gender">
+          <label class="custom-control-label " for="woman">زن</label>
+        </div>
+         
   
-  
-          <div class="row">
-            <div class="col-md-5 mb-3">
+          <div class="row mt-3">
+            <div class="col-md-5 ">
               <label for="country">استان</label>
               <select class="custom-select d-block w-100" id="country" required="">
                 <option value="">Choose...</option>

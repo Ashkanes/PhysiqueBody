@@ -13,6 +13,7 @@ import { ListCoachesComponent } from './components/list-coaches/list-coaches.com
 import { MemberListComponent } from './components/list-coaches/member-list/member-list.component';
 import { CoachDetailComponent } from './components/list-coaches/coach-detail/coach-detail.component';
 import { MemberEditComponent } from './components/list-coaches/member-edit/member-edit.component';
+import { RegisterClubComponent } from './components/register-club/register-club.component';
 
 
 
@@ -26,7 +27,8 @@ import { MemberEditComponent } from './components/list-coaches/member-edit/membe
         ListCoachesComponent,
         MemberListComponent,
         CoachDetailComponent,
-        MemberEditComponent],
+        MemberEditComponent,
+        RegisterClubComponent],
   imports: [
     CommonModule,
     BasicRoutingModule,
