@@ -1,0 +1,28 @@
+.container {
+    max-width: 600px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.form-signin {
+    width: 100%;
+    max-width:500px;
+    padding: 15px;
+    margin: auto;
+}
+
+img.img-thumbnail {
+    height: 100px;
+    min-width: 100px !important;
+    margin-bottom: 2px;
+}
+
+.nv-file-over {
+    border: dotted 3px red;
+}
+
+input[type=file] {
+    color: transparent;
+}
