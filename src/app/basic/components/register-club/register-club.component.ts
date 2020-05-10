@@ -66,7 +66,10 @@ export class RegisterClubComponent implements OnInit {
       return;
     }
       this.regionService.getCity(id).subscribe(
-        data => this.cities = data
+        data => {
+          this.cities = data;
+          console.log(this.cities);
+        }
       )
     
   }

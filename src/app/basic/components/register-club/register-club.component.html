@@ -17,20 +17,22 @@
               <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="lastName"  [(ngModel)]="model.lastName">
             </div>
           </div>
-  
-          <div class="mb-3">
-            <label for="Name">نام باشگاه</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="Name" placeholder="" required="" name="Name"  [(ngModel)]="model.Name">
+        <div class="row">
+            <div class="col-md-6  mb-3">
+              <label for="Name">نام باشگاه</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="Name" placeholder="" required="" name="Name"  [(ngModel)]="model.Name">
+              </div>
             </div>
-          </div>
 
-          <div class="mb-3">
-            <label for="Mobile">شماره موبایل</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="Mobile" placeholder="" required="" name="Mobile"  [(ngModel)]="model.Mobile">
+            <div class="col-md-6  mb-3">
+              <label for="Mobile">شماره موبایل</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="Mobile" placeholder="" required="" name="Mobile"  [(ngModel)]="model.Mobile">
+              </div>
             </div>
-          </div>
+        </div>
+
   
 
           <div class="mb-3">
@@ -57,14 +59,14 @@
               <label for="region">استان</label>
               <select class="custom-select d-block w-100" id="region" required="" #regional (change)="fetchCity(regional.value)">
                 <option value="undefined">انتخاب استان...</option>
-                <option *ngFor="let region of regions" value="{{region.Id}}">{{region.Name}}</option>
+                <option *ngFor="let region of regions" value="{{region.id}}">{{region.name}}</option>
               </select>
             </div>
             <div class="col-md-4 mb-3">
               <label for="city">شهر</label>
               <select class="custom-select d-block w-100" id="state" required="">
                 <option value="undefined">انتخاب شهر...</option>
-                <option *ngFor="let city of Cities" value="{{city.Id}}">{{city.Name}}</option>
+                <option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</option>
               </select>
             </div>
             <div class="col-md-3 mb-3">
@@ -141,7 +143,7 @@
 
 
           <hr class="mb-4">
-          <button class="btn btn-primary btn-lg btn-block" type="submit"> ثبت نام اولیه</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="registerForm.invalid || !uploader.queue.length"> ثبت نام اولیه</button>
         </form>
       </div>
     </div>
